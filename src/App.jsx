@@ -4,10 +4,11 @@ import CharDetails from "./components/CharDetails";
 import AllChars from "./components/AllChars";
 import bgVid from "./assets/videoplayback.webm";
 import AllFilms from "./components/AllFilms";
-import Header from "./components/Header";
+import Header from "./views/Header";
 import AllStarships from "./components/AllStarships";
 import StarshipDetails from "./components/StarshipDetails";
 import lucreHulk from "./assets/lucrehulk.webm";
+import Routing from "./routes/Routing";
 function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const [currentIndex, setCurrentIndex] = useState(1);
@@ -173,16 +174,7 @@ function App() {
 
             <Suspense fallback={"Loading..."}>
               <span id="details"></span>
-              <Routes>
-                <Route
-                  path="/characters/:id"
-                  element={<CharDetails swData={swData} />}
-                />
-                <Route
-                  path="/starships/:id"
-                  element={<StarshipDetails starship={selectedStarship} />}
-                />
-              </Routes>
+              <Routing starship={selectedStarship} swData={swData} />
               {showChars ? (
                 <span id="characters">
                   {selectedMovie && (
