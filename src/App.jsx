@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import AllChars from "./components/AllChars";
 import bgVid from "./assets/videoplayback.webm";
 import AllFilms from "./components/AllFilms";
-import Header from "./views/Header";
+import Header from "./components/Header";
 import AllStarships from "./components/AllStarships";
 
 import lucreHulk from "./assets/lucrehulk.webm";
