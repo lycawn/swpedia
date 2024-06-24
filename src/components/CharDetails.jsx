@@ -15,7 +15,7 @@ function CharDetails({ swData }) {
         <span className="info-label">Height:</span> {character.height}
       </div>
       <div>
-        <span className="info-label">Mass:</span> {character.mass}
+        <span className="info-label">KG:</span> {character.mass}
       </div>
       <div>
         <span className="info-label">Hair Color:</span> {character.hair_color}
