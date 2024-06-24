@@ -7,40 +7,28 @@ function CharDetails({ swData }) {
 
   if (!character) return <div>Character not found</div>;
 
+  const characterAttributes = [
+    { label: "Height", key: "height" },
+    { label: "KG", key: "mass" },
+    { label: "Hair Color", key: "hair_color" },
+    { label: "Skin Color", key: "skin_color" },
+    { label: "Eye Color", key: "eye_color" },
+    { label: "Birth Year", key: "birth_year" },
+    { label: "Gender", key: "gender" },
+    { label: "Species", key: "species" },
+    { label: "Starships", key: "starships" },
+    { label: "Movies", key: "films" },
+  ];
+
   return (
     <div className="char-details-container">
       <h1>Character Details</h1>
       <h2>{character.name}</h2>
-      <div>
-        <span className="info-label">Height:</span> {character.height}
-      </div>
-      <div>
-        <span className="info-label">KG:</span> {character.mass}
-      </div>
-      <div>
-        <span className="info-label">Hair Color:</span> {character.hair_color}
-      </div>
-      <div>
-        <span className="info-label">Skin Color:</span> {character.skin_color}
-      </div>
-      <div>
-        <span className="info-label">Eye Color:</span> {character.eye_color}
-      </div>
-      <div>
-        <span className="info-label">Birth Year:</span> {character.birth_year}
-      </div>
-      <div>
-        <span className="info-label">Gender:</span> {character.gender}
-      </div>
-      <div>
-        <span className="info-label">Species:</span> {character.species}
-      </div>
-      <div>
-        <span className="info-label">Starships:</span> {character.starships}
-      </div>{" "}
-      <div>
-        <span className="info-label">Movies:</span> {character.films}
-      </div>
+      {characterAttributes.map(({ label, key }) => (
+        <div key={key}>
+          <span className="info-label">{label}:</span> {character[key]}
+        </div>
+      ))}
     </div>
   );
 }

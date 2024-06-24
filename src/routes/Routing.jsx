@@ -5,8 +5,7 @@ import StarshipDetails from "../components/StarshipDetails";
 
 export default function Routing({ swData, starship }) {
   return (
-    <div>
-      {" "}
+    <>
       <Routes>
         <Route
           path="/characters/:id"
@@ -17,6 +16,6 @@ export default function Routing({ swData, starship }) {
           element={<StarshipDetails starship={starship} />}
         />
       </Routes>
-    </div>
+    </>
   );
 }

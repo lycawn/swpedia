@@ -1,12 +1,12 @@
 import { Suspense, useEffect, useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import CharDetails from "./components/CharDetails";
+import { BrowserRouter as Router } from "react-router-dom";
+
 import AllChars from "./components/AllChars";
 import bgVid from "./assets/videoplayback.webm";
 import AllFilms from "./components/AllFilms";
 import Header from "./views/Header";
 import AllStarships from "./components/AllStarships";
-import StarshipDetails from "./components/StarshipDetails";
+
 import lucreHulk from "./assets/lucrehulk.webm";
 import Routing from "./routes/Routing";
 function App() {
@@ -179,7 +179,7 @@ function App() {
                 <span id="characters">
                   {selectedMovie && (
                     <p>
-                      Characters Starred in :{" "}
+                      Characters Starred in :
                       <span className="selected-movie-span">
                         {selectedMovie.title}
                       </span>

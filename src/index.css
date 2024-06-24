@@ -160,7 +160,7 @@ button:hover {
 .scrollup {
   position: fixed;
   bottom: 30px;
-  left: 30px;
+  right: 30px;
   background-color: #434141;
   padding: 10px;
   border-radius: 50%;
